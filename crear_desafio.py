@@ -42,7 +42,7 @@ for idx, row in invalidos.iterrows():
 
 
 segmentos = segmentos[
-    ["idTarea", "addr:interpolation", "source", "geometry"]
+    ["idTarea", "start_addr:housenumber", "end_addr:housenumber", "addr:interpolation", "source", "geometry"]
 ].copy()
 
 nodos = nodos[
@@ -67,7 +67,7 @@ def redondear_geom(geom, decimales=7):
 RS = "\x1e"
 
 
-with open("maproulette.geojson", "w", encoding="utf-8") as f:
+with open("desafioNorte.geojson", "w", encoding="utf-8") as f:
 
     for id_tarea, segs in segmentos.groupby("idTarea"):
 

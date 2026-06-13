@@ -64,36 +64,32 @@ def redondear_geom(geom, decimales=7):
         lambda coords: np.round(coords, decimales)
     )
 
+features = []
+
+# segmentos
+for _, row in segmentos.iterrows():
+    geom = redondear_geom(row.geometry)
+
+    features.append({
+        "type": "Feature",
+        "properties": row.drop("geometry").to_dict(),
+        "geometry": geom.__geo_interface__
+    })
+
+# nodos
+for _, row in nodos.iterrows():
+    geom = redondear_geom(row.geometry)
+
+    features.append({
+        "type": "Feature",
+        "properties": row.drop("geometry").to_dict(),
+        "geometry": geom.__geo_interface__
+    })
+
+geojson = {
+    "type": "FeatureCollection",
+    "features": features
+}
+
 with open("objetosNorte.geojson", "w", encoding="utf-8") as f:
-
-    for id_tarea, segs in segmentos.groupby("idTarea"):
-
-        features = []
-
-        # segmento
-        for _, row in segs.iterrows():
-            geom = redondear_geom(row.geometry)
-            features.append({
-                "type": "Feature",
-                "properties": row.drop("geometry").to_dict(),
-                "geometry": geom.__geo_interface__
-            })
-
-        # nodos asociados
-        nodos_tarea = nodos[nodos["idTarea"] == id_tarea]
-
-        for _, row in nodos_tarea.iterrows():
-            geom = redondear_geom(row.geometry)
-            features.append({
-                "type": "Feature",
-                "properties": row.drop("geometry").to_dict(),
-                "geometry": geom.__geo_interface__
-            })
-
-        fc = {
-            "type": "FeatureCollection",
-            "features": features
-        }
-
-        json.dump(fc, f, ensure_ascii=False)
-        f.write("\n")
+    json.dump(geojson, f, ensure_ascii=False)

@@ -14,11 +14,11 @@ El GeoJSON generado incluye separadores newline.
 import geopandas as gpd
 
 segmentos = gpd.read_file(
-    "segmentosCortadosNorte.gpkg"
+    "segmentosCortadosSur.gpkg"
 )
 
 nodos = gpd.read_file(
-    "nodosNorte.gpkg"
+    "nodosSur.gpkg"
 )
 
 
@@ -91,5 +91,5 @@ geojson = {
     "features": features
 }
 
-with open("objetosNorte.geojson", "w", encoding="utf-8") as f:
+with open("objetosSur.geojson", "w", encoding="utf-8") as f:
     json.dump(geojson, f, ensure_ascii=False)

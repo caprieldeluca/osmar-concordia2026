@@ -14,11 +14,11 @@ El GeoJSON generado incluye separadores newline.
 import geopandas as gpd
 
 segmentos = gpd.read_file(
-    "segmentosCortadosNorte.gpkg"
+    "segmentosCortadosSur.gpkg"
 )
 
 nodos = gpd.read_file(
-    "nodosNorte.gpkg"
+    "nodosSur.gpkg"
 )
 
 
@@ -67,7 +67,7 @@ def redondear_geom(geom, decimales=7):
 RS = "\x1e"
 
 
-with open("desafioNorte.geojson", "w", encoding="utf-8") as f:
+with open("desafioSur.geojson", "w", encoding="utf-8") as f:
 
     for id_tarea, segs in segmentos.groupby("idTarea"):
 

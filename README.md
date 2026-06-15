@@ -2,7 +2,7 @@
 
 Soporte de datos a actividades de mapeo de OpenStreetMap Argentina, en Concordia 2026.
 
-Extracción automática de segmentos y nodos de interpolación, a partir de números de puerta y calles de la IDE.
+Extracción automática de segmentos y nodos de interpolación, a partir de números de puerta y calles de la [IDE](https://ide.concordia.gob.ar/visualizador/?zoom=11&lat=-31.35&lng=-58.05&layers=argenmap,sig_calles2022).
 
 ## Desafíos MapRoulette
 

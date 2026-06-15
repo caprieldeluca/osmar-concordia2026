@@ -35,4 +35,4 @@ Cada archivo es una FeatureCollection. Sus objetos objetos pueden tener geometrÃ
 
 #### Notas
 
-Eliminar atributo `idTarea` antes de subir cambios.
+Eliminar la etiqueta `idTarea` antes de subir cambios.

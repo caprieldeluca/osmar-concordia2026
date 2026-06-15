@@ -31,7 +31,7 @@ GeoJSON ([RFC7946](https://datatracker.ietf.org/doc/html/rfc7946)) crudo, con lo
 - [objetosSur.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosSur.geojson)
 - [objetosCentro.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosCentro.geojson)
 
-Cada archivo es una FeatureCollection. Sus objetos objetos pueden tener geometrías diferentes (LineString y Point). Otras aplicaciones SIG quizás no puedan convertirlos a sus propios modelos de datos.
+Cada archivo es una FeatureCollection. Sus objetos pueden tener geometrías diferentes (LineString y Point). Otras aplicaciones SIG quizás no puedan convertirlos a sus propios modelos de datos.
 
 #### Notas
 

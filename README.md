@@ -28,8 +28,8 @@ Centro lo tenemos bastante completo, así que la mayoría son para revisar.
 GeoJSON ([RFC7946](https://datatracker.ietf.org/doc/html/rfc7946)) crudo, con los objetos para agregar como capa de datos en los editores.
 
 - [objetosNorte.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosNorte.geojson)
-- [objetosSur.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosNorte.geojson)
-- [objetosCentro.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosNorte.geojson)
+- [objetosSur.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosSur.geojson)
+- [objetosCentro.geojon](https://raw.githubusercontent.com/caprieldeluca/osmar-concordia2026/refs/heads/main/objetosCentro.geojson)
 
 Tienen geometrías LineString y Point, por lo que otras aplicaciones SIG quizás no puedan convertirlos a sus propios modelos de datos.
 
